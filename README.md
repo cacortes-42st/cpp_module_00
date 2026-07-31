@@ -4,47 +4,13 @@
 * If you find any kind of error or you have suggestions to improve, please do not hesitate to point them out in the 'issues' section! Obviously always respectfully, thank you :D.
 * All the executable files that this project creates have been selected by me. For your own project, you can use whatever names you prefer to create your files, always keeping the subject in mind.
 * This module is your first contact with **Object-Oriented Programming** in C++. The goal is not only to make the exercises work, but also to become familiar with the C++ way of thinking.
-* **Read the entire subject before starting.** Some requirements are mentioned in the examples instead of the exercise description.
-* The entire module must be compiled using:
-    * `c++`
-    * `-Wall -Wextra -Werror`
-    * Your project must also compile correctly with `-std=c++98`.
-* Throughout this module remember the following restrictions:
-    * Do **not** use `printf()`.
-    * Do **not** use `malloc()` or `free()`.
-    * Do **not** use `using namespace`.
-    * Do **not** implement functions inside header files (unless they are templates, which you won't use yet).
-    * The STL containers and algorithms are forbidden until Module 08.
-* Watch out for **memory leaks**, even if this module barely uses dynamic memory.
-* Learn the difference between:
-    * Stack allocation.
-    * Heap allocation.
-    * Objects.
-    * Classes.
-    * Member functions.
-    * Constructors.
-    * Destructors.
-* If you are completely new to C++, don't try to compare every feature with C. Many things are done differently on purpose.
-
-### Useful resources:
-* LearnCpp:
-    * https://www.learncpp.com/
-* cplusplus reference:
-    * https://cplusplus.com/reference/
-* iomanip reference:
-    * https://cplusplus.com/reference/iomanip/
-* string reference:
-    * https://cplusplus.com/reference/string/string/
-
----
 
 # ex00: Megaphone
 
 ### Mandatory requirements:
 * Create a program called **megaphone**.
-* If one or more arguments are received:
-    * Print every argument in **uppercase**.
-    * Preserve spaces between arguments.
+* The program must print the arguments recieved but in *uppercase*, as long as it is between *brackets*. This includes punctuation marks
+* Is necessary to follow this rule even if there are more than one argument in brackets.
 * If no arguments are received:
     * Print:
 ```
