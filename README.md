@@ -9,8 +9,8 @@
 
 ### Mandatory requirements:
 * Create a program called **megaphone**.
-* The program must print the arguments recieved but in *uppercase*, as long as it is between *brackets*. The final output must include puntuation marks, numbers and other symbols if they are included in the arguments.
-* Is necessary to follow this rule even if there are more than one argument in brackets.
+* The program must print the arguments recieved but in *uppercase*, it does´nt have to be between *brackets* to be valid. The final output must include puntuation marks, numbers and other symbols if they are included in the arguments.
+* Is necessary to follow this rule even if there are more than one argument in brackets (for more than one argument, the brackets are necessary).
 * If no arguments are received, the program must print:
 ```
 * LOUD AND UNBEARABLE FEEDBACK NOISE *
@@ -19,29 +19,10 @@
 
 ### What can we learn about this exercise?
 
-Although this exercise looks extremely simple, it introduces several concepts that will be used throughout every C++ module.
-
-You will learn:
-
-* How a C++ program is structured.
-* How `std::cout` replaces `printf`.
-* How command line arguments are still received through `argc` and `argv`.
-* How to use functions from the C++ standard library.
-* How to manipulate characters using functions such as `std::toupper()`.
-
-This is also your first contact with compiling a C++ project using the required flags.
-
-### Common mistakes:
-
-* Forgetting to cast the argument to `unsigned char` before using `toupper()`.
-* Forgetting the newline at the end.
-* Printing multiple spaces accidentally.
-* Using `printf()` instead of C++ streams.
+This exercise serves as an introduction to the basis of C++. It teachs yot how `std::cout` replaces `printf, how to use functions from the C++ standard library and how to manipulate characters using functions such as `std::toupper()`. This also theachs you about compiling a C++ project using the required flags.
 
 ### Output example:
-
 #### The example output doesn't have to be exactly like the subject example.
-
 ![Example](images/ex00-output.png)
 
 ---
