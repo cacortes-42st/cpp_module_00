@@ -19,7 +19,7 @@
 
 ### What can we learn about this exercise?
 
-This exercise serves as an introduction to the basis of C++. It teachs yot how `std::cout` replaces `printf, how to use functions from the C++ standard library and how to manipulate characters using functions such as `std::toupper()`. This also theachs you about compiling a C++ project using the required flags.
+This exercise serves as an introduction to the basis of C++. It teachs yot how `std::cout` replaces `printf`, how to use functions from the C++ standard library and how to manipulate characters using functions such as `std::toupper()`. And also theachs you about compiling a C++ project using the required flags.
 
 ### Output example:
 #### The example output doesn't have to be exactly like the subject example.
@@ -27,73 +27,41 @@ This exercise serves as an introduction to the basis of C++. It teachs yot how `
 
 ---
 
-# ex01: My Awesome PhoneBook
+## ex01: My Awesome PhoneBook
 
 ### Mandatory requirements:
+* First you need to implement the class **PhoneBook**.
+   * It has an array of contacts.
+   * The maximun number of contacts that can store is 8, if a 9th contact is added it must replace the oldest one by the new one.
+   * Dynamic allocation is forbidden
+* Then you need to implement the class **Contact**. (The Phonebook class must include attributes whose data types is Conctact class).
+   * It works as a phonebook contact. It must include the following data:
+     * First name.
+     * Last name.
+     * Nickname.
+     * Phone number.
+     * Darkest secret.
 
-Create two classes:
-
-* **PhoneBook**
-* **Contact**
-
-The program must continuously wait for one of the following commands:
+The program at start is empty, but then it must *continuously* wait for the user to enter one of the following commands:
 
 * `ADD`
+   * Ask the user for the data fields that define the `Contact` class, one field at a time. Once all fields have been completed, the program must add the contact to the phonebook.
+   * Empty fields are not allowed.
+
+
 * `SEARCH`
+   * Display every stored contact as a table containing 4 columns:
+       * Index.
+       * First name.
+       * Last name.
+       * Nickname.
+   * Every column must have a width of **10** characters and be right aligned. The columns are separated by a pipe character ('|')
+   * If a field is longer than 10 characters you must truncate it and replace the last visible character with a `.`
+   * After the table, the program must display a promt for the user to enter an index of a conctad to show. If it is out of range or wrong, it must respond with a proper behavior (Error sing). Otherwise display the contact information, one field per line.
+   * The subject expects you to use **iomanip** to format the table.
+
 * `EXIT`
-
-### ADD
-
-When the user enters `ADD`:
-
-* Ask the user for:
-    * First name.
-    * Last name.
-    * Nickname.
-    * Phone number.
-    * Darkest secret.
-* Empty fields are **not allowed**.
-* Store the contact inside the phonebook.
-* The phonebook can only store **8 contacts**.
-* When adding a ninth contact, the **oldest** one must be replaced.
-
-### SEARCH
-
-When the user enters `SEARCH`:
-
-* Display every stored contact.
-* Show a table containing:
-    * Index.
-    * First name.
-    * Last name.
-    * Nickname.
-* Every column must:
-    * Have a width of **10** characters.
-    * Be right aligned.
-* If a field is longer than 10 characters:
-    * Truncate it.
-    * Replace the last visible character with a `.`
-
-Example:
-
-```text
-|         0|Guillerm.|Fernande.|guille42|
-```
-
-After displaying the table:
-
-* Ask the user for an index.
-* If it is valid:
-    * Display every field of that contact.
-* Otherwise:
-    * Show a meaningful error or ignore the input.
-
-The subject expects you to use **iomanip** to format the table.
-
-### EXIT
-
-* Close the program.
-* All contacts are lost.
+   * It must close the program so all contacts are lost.
 
 ### What can we learn about this exercise?
 
@@ -111,25 +79,6 @@ You will learn:
 * Basic user interaction through the terminal.
 
 This exercise also encourages writing clean code by separating responsibilities between the `PhoneBook` and `Contact` classes.
-
-### Tips
-
-* Keep all validation inside dedicated functions whenever possible.
-* Don't make `main.cpp` huge.
-* Consider using helper methods for:
-    * Reading input.
-    * Printing the table.
-    * Validating indices.
-* Remember that `std::getline()` is usually better than `operator>>` for interactive programs.
-
-### Common mistakes
-
-* Accepting empty fields.
-* Forgetting to replace the oldest contact.
-* Misaligning the output table.
-* Forgetting to truncate long strings.
-* Crashing when the user enters invalid input.
-* Mixing `std::cin >>` and `std::getline()` incorrectly.
 
 ### Output example
 
