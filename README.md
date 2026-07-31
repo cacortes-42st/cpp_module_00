@@ -5,29 +5,17 @@
 * All the executable files that this project creates have been selected by me. For your own project, you can use whatever names you prefer to create your files, always keeping the subject in mind.
 * This module is your first contact with **Object-Oriented Programming** in C++. The goal is not only to make the exercises work, but also to become familiar with the C++ way of thinking.
 
-# ex00: Megaphone
+## ex00: Megaphone
 
 ### Mandatory requirements:
 * Create a program called **megaphone**.
-* The program must print the arguments recieved but in *uppercase*, as long as it is between *brackets*. This includes punctuation marks
+* The program must print the arguments recieved but in *uppercase*, as long as it is between *brackets*. The final output must include puntuation marks, numbers and other symbols if they are included in the arguments.
 * Is necessary to follow this rule even if there are more than one argument in brackets.
-* If no arguments are received:
-    * Print:
+* If no arguments are received, the program must print:
 ```
 * LOUD AND UNBEARABLE FEEDBACK NOISE *
 ```
 * Every output must end with a newline.
-* Solve the exercise using **C++**, not C.
-
-Example main execution:
-```bash
-./megaphone "Hello world!"
-```
-
-Output:
-```text
-HELLO WORLD!
-```
 
 ### What can we learn about this exercise?
 
