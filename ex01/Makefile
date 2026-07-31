@@ -1,0 +1,43 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: cacortes <cacortes@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/02/24 09:28:33 by cacortes          #+#    #+#              #
+#    Updated: 2026/03/04 20:21:59 by cacortes         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+SRCS = phonebook.cpp main.cpp contact.cpp
+NAME = phonebook
+
+CC = c++
+CFLAGS = -Wall -Wextra -Werror -std=c++98
+
+GREEN = \033[0;32m
+YELLOW = \033[0;33m
+RED = \033[0;31m
+BLUE = \033[0;34m
+RESET = \033[0m
+
+all: $(NAME)
+
+$(NAME): $(SRCS)
+	@echo "$(BLUE)\nCreating the executable file $(NAME)...$(RESET)"
+	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	@echo "$(GREEN)\n$(NAME) is ready.\n$(RESET)"
+
+clean:
+	@echo "$(YELLOW)\nCleaning files...\n$(RESET)"
+	@rm -f $(NAME)
+
+fclean: clean
+	@echo "$(RED)\nDeleting $(NAME)...\n$(RESET)"
+	@rm -f $(NAME)
+
+re:
+	@echo "$(BLUE)\nRecompiling $(NAME)...$(RESET)"
+	@$(MAKE) fclean
+	@$(MAKE) all
