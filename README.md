@@ -25,7 +25,6 @@ This exercise serves as an introduction to the basis of C++. It teachs yot how `
 #### The example output doesn't have to be exactly like the subject example.
 ![Example](images/ex00-output.png)
 
----
 
 ## ex01: My Awesome PhoneBook
 
